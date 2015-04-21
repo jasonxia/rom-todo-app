@@ -1,0 +1,6 @@
+<%= form_for task do |t| %>
+  <%= task.errors.full_messages if task.errors %>
+  <%= t.text_field :title %>
+  <%= t.select :is_completed, [['Completed', true], ['Active', false]] %>
+  <%= t.submit %>
+<% end %>
